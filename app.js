@@ -56,8 +56,8 @@ gridButton.addEventListener("click", () => {
             col.addEventListener(events[deviceType].down, () => {
                 draw = true;
                 if (erase) {
-                    col.style.backgroundcolor = "transparent";
-                } else { col.style.backgroundcolor = colorButton.value; }
+                    col.style.backgroundColor = "transparent";
+                } else { col.style.backgroundColor = colorButton.value; }
             });
 
             col.addEventListener(events[deviceType].move, (e) => {
@@ -86,9 +86,9 @@ function checker(elementId) {
     gridColumns.forEach((element) => {
         if (elementId == element.id) {
             if (draw && !erase) {
-                element.style.backgroundcolor = colorButton.value;
+                element.style.backgroundColor = colorButton.value;
             } else if (draw && erase) {
-                element.style.backgroundcolor = "transparent";
+                element.style.backgroundColor = "transparent";
             }
         }
     });
